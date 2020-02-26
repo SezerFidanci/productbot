@@ -23,6 +23,8 @@ class ProductBot
         $title="";
         $description="";
         $keywords="";
+        $price="";
+        $currency="";
         $pageimages = array();
 
 
@@ -38,30 +40,36 @@ class ProductBot
         $titles = $doc->getElementsByTagName('title');
         if ($titles->length > 0)
         {
-            $title = $titles->item(0)->textContent;
+            $title = trim(preg_replace('/[\t|\s{2,}]/', ' ', $titles->item(0)->textContent));
         }
         // Page Title End
 
 
-        // Page Description,Keywords Start
+        // Page Description,Keywords,Price Start
         $metas = $doc->getElementsByTagName('meta');
         for ($i = 0; $i < $metas->length; $i++)
         {
             $meta = $metas->item($i);
             if($meta->getAttribute('name') == 'description')
-                $description = $meta->getAttribute('content');
+                $description =trim(preg_replace('/[\t|\s{2,}]/', ' ', $meta->getAttribute('content')));
             if($meta->getAttribute('name') == 'keywords')
-                $keywords = $meta->getAttribute('content');
-        }
+                $keywords =trim(preg_replace('/[\t|\s{2,}]/', ' ',  $meta->getAttribute('content')));
+            if($meta->getAttribute('itemprop') == 'price')
+                $price =trim(preg_replace('/[\t|\s{2,}]/', ' ',  $meta->getAttribute('content')));
+            if($meta->getAttribute('itemprop') == 'priceCurrency')
+                $currency =trim(preg_replace('/[\t|\s{2,}]/', ' ',  $meta->getAttribute('content')));
 
-        // Page Description,Keywords End
+        }
+        // Page Description,Keywords,Price End
+
 
         // Page Images Start
         $images = $doc->getElementsByTagName('img');
         foreach ($images as $image) {
 
-            array_push($pageimages,$image->getAttribute('src'));
-
+            if (filter_var($image->getAttribute('src'), FILTER_VALIDATE_URL)) {
+                array_push($pageimages,$image->getAttribute('src'));
+            }
 
         }
         // Page Images End
@@ -71,12 +79,14 @@ class ProductBot
             'title'=>$title,
             'description'=>$description,
             'keywords'=>$keywords,
+            'price'=>$price,
+            'currency'=>$currency,
             'images'=>$pageimages,
         );
 
         $response = array(
             'status'=>true,
-            'message'=>"page_success_loaded",
+            'message'=>"success_loaded",
             'data'=>$pageData,
         );
 
