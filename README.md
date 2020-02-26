@@ -11,14 +11,14 @@ E-Commerce web site data crawler PHP library.
 $ composer require sezerfidanci/productbot
 ```
 ### Usage
-```sh
-$ <?php
-$ use ProductBot\ProductBot;
-...
-...
-$ $product = new ProductBot();
-$ $response = $product->crawPage("https://www.adidas.com.tr/tr/3-bantli-tisort/CW1202.html");
-$ echo json_encode($response);
+```php
+<?php
+  use ProductBot\ProductBot;
+  ...
+  ...
+  $product = new ProductBot();
+  $response = $product->crawPage("https://www.adidas.com.tr/tr/3-bantli-tisort/CW1202.html");
+  echo json_encode($response);
 ```
 ### Result
 ```json
