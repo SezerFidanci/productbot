@@ -17,7 +17,7 @@
         "php": ">=5.3",
         "ext-dom": "*"
     },
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "autoload": {
         "psr-4": {
             "ProductBot\\": "src/"
