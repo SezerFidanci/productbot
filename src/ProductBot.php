@@ -1,5 +1,5 @@
 <?php
-
+namespace ProductBot;
 
 class ProductBot
 {
