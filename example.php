@@ -4,4 +4,4 @@ $productBot = new ProductBot();
 
 $productBot->crawPage('test');
 
-echo $productBot;
+echo json_encode($productBot);
