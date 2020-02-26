@@ -12,5 +12,8 @@
             "homepage": "http://sezerfidanci.com",
             "role": "Developer"
         }
-    ]
+    ],
+    "require": {
+       
+    }
 }
