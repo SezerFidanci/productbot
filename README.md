@@ -1,6 +1,6 @@
 # Product Bot
 
-![](https://img.shields.io/github/release/pandao/editor.md.svg)
+[![Latest Stable Version](https://poser.pugx.org/barryvdh/laravel-debugbar/version.png)](https://packagist.org/packages/sezerfidanci/productbot)
 E-Commerce web site data crawler library.
 
 ### Installation
