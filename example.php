@@ -1,7 +1,7 @@
 <?php
 
-$productBot = new ProductBot();
+require_once __DIR__ . '/autoload.php';
+use ProductBot as PB;
 
-$productBot->crawPage('test');
 
-echo json_encode($productBot);
+echo json_encode(PB::crawPage("awd"));
