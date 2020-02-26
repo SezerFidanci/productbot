@@ -1,15 +1,15 @@
 {
-    "name": "your-brand-name/your-project",
+    "name": "SezerFidanci/productbot",
     "type": "library",
-    "description": "Your package description goes here",
-    "keywords": ["relevant","tags","go","here"],
-    "homepage": "https://yourcompany.com",
+    "description": "Product Bot",
+    "keywords": ["product","bot","item","upudate"],
+    "homepage": "https://sezerifdanci.com",
     "license": "MIT",
     "authors": [
         {
-            "name": "Jordi Boggiano",
-            "email": "j.boggiano@seld.be",
-            "homepage": "http://seld.be",
+            "name": "Sezer Fidanci",
+            "email": "sezerfidanci@gmail.com",
+            "homepage": "http://sezerfidanci.com",
             "role": "Developer"
         }
     ]
