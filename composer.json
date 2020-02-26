@@ -1,0 +1,16 @@
+{
+    "name": "your-brand-name/your-project",
+    "type": "library",
+    "description": "Your package description goes here",
+    "keywords": ["relevant","tags","go","here"],
+    "homepage": "https://yourcompany.com",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jordi Boggiano",
+            "email": "j.boggiano@seld.be",
+            "homepage": "http://seld.be",
+            "role": "Developer"
+        }
+    ],
+}
