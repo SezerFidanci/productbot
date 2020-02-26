@@ -17,7 +17,7 @@ $ use ProductBot\ProductBot;
 ...
 ...
 $ $product = new ProductBot();
-$ $response = $product->crawPage("https://www.decathlon.com.tr/mh100-polar-id_8492976.html");
+$ $response = $product->crawPage("https://www.adidas.com.tr/tr/3-bantli-tisort/CW1202.html");
 $ echo json_encode($response);
 ```
 ### Result
