@@ -1,6 +1,6 @@
 # Product Bot
 
-[!]https://img.shields.io/packagist/v/sezerfidanci/productbot
+![](https://img.shields.io/packagist/v/sezerfidanci/productbot)
 
 E-Commerce web site data crawler library.
 
