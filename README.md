@@ -1,6 +1,6 @@
 # Product Bot
 
-![](https://img.shields.io/github/release/pandao/editor.md.svg) 
+![](https://img.shields.io/github/release/pandao/editor.md.svg)
 E-Commerce web site data crawler library.
 
 ### Installation
