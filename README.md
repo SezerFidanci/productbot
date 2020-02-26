@@ -4,7 +4,7 @@
 ![](https://img.shields.io/github/forks/SezerFidanci/productbot)
 ![](https://img.shields.io/github/stars/SezerFidanci/productbot)
 
-E-Commerce web site data crawler library.
+E-Commerce web site data crawler PHP library.
 
 ### Installation
 ```sh
