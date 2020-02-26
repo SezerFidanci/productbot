@@ -51,13 +51,13 @@ class ProductBot
         {
             $meta = $metas->item($i);
             if($meta->getAttribute('name') == 'description')
-                $description =trim(preg_replace('/[\t|\s{2,}]/', ' ', $meta->getAttribute('content')));
+                $description =trim(strip_tags(preg_replace('/[\t|\s{2,}]/', ' ', $meta->getAttribute('content'))));
             if($meta->getAttribute('name') == 'keywords')
-                $keywords =trim(preg_replace('/[\t|\s{2,}]/', ' ',  $meta->getAttribute('content')));
+                $keywords =trim(strip_tags(preg_replace('/[\t|\s{2,}]/', ' ',  $meta->getAttribute('content'))));
             if($meta->getAttribute('itemprop') == 'price')
-                $price =trim(preg_replace('/[\t|\s{2,}]/', ' ',  $meta->getAttribute('content')));
+                $price =trim(strip_tags(preg_replace('/[\t|\s{2,}]/', ' ',  $meta->getAttribute('content'))));
             if($meta->getAttribute('itemprop') == 'priceCurrency')
-                $currency =trim(preg_replace('/[\t|\s{2,}]/', ' ',  $meta->getAttribute('content')));
+                $currency =trim(strip_tags(preg_replace('/[\t|\s{2,}]/', ' ',  $meta->getAttribute('content'))));
 
         }
         // Page Description,Keywords,Price End
